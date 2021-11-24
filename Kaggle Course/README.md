@@ -64,3 +64,29 @@ This repository is a centre hub for all notes and codes of Kaggle course.
 	```
 
 	[Blackjack Solution](https://github.com/wtbrissy/kaggle/blob/main/Kaggle%20Course/Course%20Codes/blackjack-solution.ipynb)
+
+- List 
+	```Python
+	hands = [
+		['J', 'Q', 'K'],
+		['2', '2', '2'],
+		['6', 'A', 'K'], 
+	]
+
+	# Best pratice is not writting on one line 
+	```
+	- Objects
+	In short, objects carry some things around with them. The stuff can be accessed using Python's ***dot syntax***
+	
+	- A function attached to a object is called a ***method***
+	- Non-function things attached to an object, such as ```imag```, are called ***attributes***
+		```python 
+		# numbers have a method called bit_length
+		x.bit_length  
+		#<funtion int.bit_length()>
+		#To actually call it, we add parentheses: 
+		x.bit_length()
+		#4 
+		```
+
+ 
