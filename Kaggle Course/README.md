@@ -89,4 +89,59 @@ This repository is a centre hub for all notes and codes of Kaggle course.
 		#4 
 		```
 
- 
+ - Strings and Dictionaries 
+	```python
+	'Pluto\'s a planet!'
+	# using backlash to escape the single quote
+	```
+	The ```print()```function automatically adds a newline caracter unless we specify a value for the keyword argument ```end``` other than the default value of ```\n```:
+	```python
+	print("hello")
+	print("world")
+	print("hello", end='')
+	print("pluto", end='')
+	
+	#hello
+	#world
+	#hellopluto
+	```
+	- .format()
+	```python
+	"{}, you will always be the {}th planet to me.".format(planet,position)
+	```
+	```python
+	pluto_mass = 1.303 * 10*22
+	earth_mass = 5.9722 * 10**24
+	population = 52910390
+	# 2 decimal points 3decimal points, format as percent separate with commas
+	"{} weights about {:.2} kilograms ({:.3%} of Earth's mass). It is home to {:,} population.".format(planet, pluto_mass, pluto_mass / earth_mass, Plutonians)
+	#"pluto weights about 1.3e+22 kilogram (0.218% of Earth's mass). It is home to 52,910,390 Plutonians"
+	```
+	[Pyformat](https://pyformat.info/)
+	[Format String Syntax](https://docs.python.org/3/library/string.html#formatstrings)
+	
+- Working with External Libraries 
+	```python
+	from math import *
+	print(pi, log(32,2)
+	```
+	```import *``` makes all the module's variables directly accessible. 
+	
+	However, a good compromise is to import **only the specific things we'll need from each module.**
+	
+	- Three tools for understanding strange objects 
+		- type()(what is the thing?)
+			```python 
+			type(rolls)
+			numpy.ndarray
+			```
+		- dir()(what can I do with it?)
+			```python
+			print(dir(roll))
+			```
+		- help()(tell me more)
+			```python
+			help(rolls.ravel)
+			```
+			
+End of the Python Course.
