@@ -144,4 +144,8 @@ This repository is a centre hub for all notes and codes of Kaggle course.
 			help(rolls.ravel)
 			```
 			
-End of the Python Course.
+End of the Python Course. [Python Certificate](https://github.com/wtbrissy/kaggle/blob/main/Kaggle%20Course/Certificates/Winston%20Liang%20-%20Python.png)
+
+## Intro to Machine Learning
+- How models work 
+The step of capturing patterns from data is calling fitting or training the model. The data used to fit the model is called the training data.
