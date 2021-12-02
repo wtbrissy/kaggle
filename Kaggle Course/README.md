@@ -147,5 +147,51 @@ This repository is a centre hub for all notes and codes of Kaggle course.
 End of the Python Course. [Python Certificate](https://github.com/wtbrissy/kaggle/blob/main/Kaggle%20Course/Certificates/Winston%20Liang%20-%20Python.png)
 
 ## Intro to Machine Learning
-- How models work 
-The step of capturing patterns from data is calling fitting or training the model. The data used to fit the model is called the training data.
+- How models work
+The step of capturing patterns from data is calling fitting or training the model. The data used to fit the model is called the **training data.** The point at the bottom wher emake a prediction is called a **leaf**. [Data Structure Tree](https://leetcode.com/explore/learn/card/data-structure-tree/)
+
+- Basic Data Exploration 
+	```.describe()``` print a summary of the dataset 
+	
+	- Interpreting Data Description
+	
+		count| mean | std | min |max
+		---|---|---|---|---
+		rows with non-missing values| average|standard deviation| column from lowest to highest | largest number|
+		
+	```columns``` see a list of all columns in the dataset 
+	```dropna``` drops missing values 
+	
+	Prediction Target | Feature 
+	---|---|
+	dot-notation| Each item in the list should be a string (with quotes)
+	
+- Building the model 
+	- Define: what type of model will it be? A decision tree? Some other types of model? Some other parameters of the model type are specified too? 
+	- Fit: capture patterns from provided data. This is the heart of modelling. 
+	- Predict: just what it sounds like
+	- Evaluate: Determine how accurate the model's predictions are
+
+- Model Validation 
+
+	In most applications, the relevant measure of model quality is predictive accuracy. 
+
+   ```python
+      # Mean Absolute Error
+      from sklearn.metrics import absoluate_error
+   ```
+   
+   - Validation data
+   
+	   To exclude some data from the model-building process, and then use those to test te model's accuracy on data it hasn't seen before. The data is called ***validation data***.
+	   
+	   ```python
+	   from sklearn.model_selection import train_test_split
+	   ```
+
+
+
+	
+
+	
+	
