@@ -188,10 +188,39 @@ The step of capturing patterns from data is calling fitting or training the mode
 	   ```python
 	   from sklearn.model_selection import train_test_split
 	   ```
-
-
-
+	   
+- Underfitting and Overfitting
+	- ***overfitting***: where a model matches the training data almost perfectly, but does poorly in validation and other new data. 
+	- ***underfitting***: when a model fails to capture important distinctions and pattrns in the data, so it performs poorly even in training data. 
 	
-
+		```max_leaf_nodes``` argument provides a very sensible way to control overfitting vs underfitting area.
 	
+		![](https://github.com/wtbrissy/kaggle/blob/main/Kaggle%20Course/Attachments/Pasted%20image%2020211203105826.png)
+		
+		Example
+		
+		```python
+		from sklearn.metrics import mean_absolute_error
+		from sklearn.tree import DecisionTreeRegressor 
+		
+		def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+			model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nods, random_state=0)
+			model.fit(train_X, train_y)
+			preds_val = model.predict(val_X)
+			mae = mean_absolute_error(val_y, preds_val)
+			return(mae)
+			
+		# load data 
+		# filter rows with missing values 
+		# choose target and features 
+		# split data into training and validation data, for both featues and target 
+		from sklearn.model_selection import train_test_split
+		train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=0)
+		
+		# compare MAE with differing values of max_leaf_nodes
+		for max_leaf_nodes in [5, 50, 500, 5000]:
+			my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+			print("Max leaf nodes: %d \t\t Mean Absolute Error: %d" %(max_leaf_nodes, my_mae))
+			
+			six months (1 month - reconnecting )
 	
